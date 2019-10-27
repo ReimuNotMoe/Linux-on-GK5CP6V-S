@@ -19,6 +19,19 @@ Display Ports	| 1 HDMI 2.0, 2 miniDP, all wired to dGPU
 - Shinelon T3 Ti (Tongfang model, not Clevo)
 - Some Mechrevo laptops
 
+## What works
+- Suspend to RAM & resume
+- Wifi + BT
+- LCD backlight control
+- Switch between iGPU / dGPU
+- HDMI audio
+- USB Type-C host mode
+- Touchpad
+- Other things that should work on all PCs
+
+## What doesn't work
+- USB Type-C in some mode other than host mode (idk if it supports charging)
+- Card reader + suspend to S3
 
 ## Problems & Workarounds
 All related files are in the [files](https://github.com/ReimuNotMoe/Linux-on-GK5CP6V-S/tree/master/files) directory.
@@ -29,7 +42,7 @@ As of kernel 5.3.7 + NVIDIA proprietary driver 440.26:
 This is caused by multiple crappy components or **their proprietary specs** :
 - Touchpad
 - Card reader
-- USB Type-C power control(?) driver
+- USB Type-C power control(?) driver (you don't need it to use it as host)
 - Faulty ACPI & IOMMU & MMCONFIG implementation and/or PCIe device drivers
 
 Workarounds:
