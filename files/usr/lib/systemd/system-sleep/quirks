@@ -1,0 +1,20 @@
+#!/bin/bash
+
+MODULES="r8169 i2c_hid"
+
+case "${1}" in
+        pre)
+		echo 'suspend quirks called' > /dev/ttyprintk
+		for i in $MODULES; do
+		       modprobe -r $i
+		done
+                ;;
+        post)
+		echo 'resume quirks called' > /dev/ttyprintk
+		for i in $MODULES; do
+		       modprobe $i
+		done
+		sh -c 'sleep 10; systemctl restart NetworkManager.service; echo nm restarted > /dev/ttyprintk' &
+                ;;
+esac
+
