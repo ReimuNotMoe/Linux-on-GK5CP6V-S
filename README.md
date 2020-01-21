@@ -18,6 +18,9 @@ Display Ports	| 1 HDMI 2.0, 2 miniDP, all wired to dGPU
 - Hasee Z7-CT7VH
 - Shinelon T3 Ti (Tongfang model, not Clevo)
 - Some Mechrevo laptops
+- Some Walmart laptops
+
+They're much cheaper than the `Kubuntu Focus Linux` laptop. ;-)
 
 ## What works
 - Suspend to RAM & resume
